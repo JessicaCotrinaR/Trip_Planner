@@ -1,4 +1,5 @@
 import mapboxgl from "mapbox-gl";
+import { hotelMarker, restaturantMarker, activityMarker } from "./marker"
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVzc2ltYXAiLCJhIjoiY2tmd3FkMjJsMW0xNDJ4dHNuODE5aGdlNSJ9.0g4cONjfbN_aAILd-dmZxQ';
 
@@ -14,4 +15,7 @@ const text = document.createTextNode('HELLO WORLD')
 element.appendChild(text);
 
 const mapMarker = new mapboxgl.Marker(element).setLngLat([-74.009, 40.705]).addTo(map);
+const hotel = new mapboxgl.Marker(hotelMarker()).setLngLat([-74.009, 40.710]).addTo(map);
+const restaurant = new mapboxgl.Marker(restaturantMarker()).setLngLat([-74.009, 40.715]).addTo(map);
+const activity = new mapboxgl.Marker(activityMarker()).setLngLat([-74.009, 40.720]).addTo(map);
 
